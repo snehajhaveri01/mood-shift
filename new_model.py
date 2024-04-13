@@ -1,74 +1,127 @@
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.pipeline import Pipeline
 import tensorflow as tf
 import random
 
-# Load emotions from text file
-def load_emotions(file_path):
-    with open(file_path, "r") as file:
-        emotions = file.readlines()
-    return [emotion.strip() for emotion in emotions]
-
-# Load positive and negative emotions
-emotions = load_emotions("emotions.txt")
-
-# Function to determine if the input text is positive or negative
-def classify_emotion(text):
-    positive_count = sum(1 for word in text.split() if word in emotions)
-    negative_count = sum(1 for word in text.split() if word in emotions)
-    return positive_count > negative_count
-
-# Load activities from text file
-def load_activities(file_path):
-    with open(file_path, "r") as file:
-        activities = file.readlines()
-    return [activity.strip() for activity in activities]
-
 # Sample Data
 data = {
+    'User': ['John', 'Alice', 'Bob', 'Emily', 'David', 'Sara'],
     'Mood': ['sad', 'stressed', 'tired', 'depressed', 'angry', 'relaxed'],
     'Aspect': ['Emotional', 'Mental', 'Physical', 'Emotional', 'Mental', 'Physical'],
     'Reasons': ['Mourned a personal achievement', 'Work deadlines and pressure', 'Lack of sleep',
                 'Received bad news', 'Conflict at work', 'Just finished a workout'],
+    'Place': ['home', 'work', 'personal', 'home', 'work', 'personal'],
+    'Desired_Mood': ['joyful', 'motivated', 'energetic', 'happy', 'calm', 'productive']
 }
 
 df = pd.DataFrame(data)
 
 # Normalize categorical data
-for column in ['Mood', 'Aspect']:
+for column in ['Mood', 'Aspect', 'Place', 'Desired_Mood']:
     df[column] = df[column].str.lower()
 
-# TensorFlow Model for Text Classification
+# Read activities from a text file
+with open("activities.txt", "r") as file:
+    activities = file.readlines()
+activities = [activity.strip() for activity in activities]
+
+# Add activities to the dataframe
+df['Activities'] = [activities] * len(df)
+
+# Preprocessing
+X = df[['Mood', 'Aspect', 'Reasons', 'Place']]
+y = df['Desired_Mood']
+
+# Text Preprocessing
+text_transformer = Pipeline(steps=[
+    ('count_vectorizer', CountVectorizer())
+])
+reasons_text = text_transformer.fit_transform(X['Reasons'])
+
+# One-hot encode categorical features
+encoder = OneHotEncoder(handle_unknown='ignore')
+categorical_features = ['Mood', 'Aspect', 'Place']
+X_encoded = encoder.fit_transform(X[categorical_features])
+
+# Combine inputs
+X_combined = np.concatenate([X_encoded.toarray(), reasons_text.toarray()], axis=1)
+
+# TensorFlow Model for Multi-Class Classification
 model = tf.keras.Sequential([
-    tf.keras.layers.Input(shape=(10000,)),  # Assuming a vocabulary of 10,000 words
+    tf.keras.layers.Input(shape=(X_combined.shape[1],)),
     tf.keras.layers.Dense(64, activation='relu'),
-    tf.keras.layers.Dense(1, activation='sigmoid')
+    tf.keras.layers.Dense(len(y.unique()), activation='softmax')
 ])
 
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-# Train text classification model
-vectorizer = CountVectorizer(max_features=10000)
-X_text = vectorizer.fit_transform(df['Reasons'])
-y_text = np.array([0 if mood in ['sad', 'stressed', 'tired', 'depressed', 'angry'] else 1 for mood in df['Mood']])
-model.fit(X_text.toarray(), y_text, epochs=10, batch_size=1)
+# Encode the labels for multi-class classification
+y_encoded = pd.factorize(y)[0]
 
-# Load activities
-activities = load_activities("activities.txt")
+# Train the model
+model.fit(X_combined, y_encoded, epochs=10, batch_size=1)
 
-# Function to recommend activities based on mood classification
-def recommend_activities(is_positive_mood):
-    activities = activities if is_positive_mood else activities
-    print("Recommended activities:")
-    random.shuffle(activities)
-    for activity in activities[:6]:
-        print(f"- {activity}")
+# model.save('mood-shift.keras')
+tf.keras.models.save_model(model, 'mood-shift_saved_model')
 
-# Function to handle user input
+
+def predict_desired_mood(mood, aspect, reason, place):
+    # input_data = text_transformer.transform([reason]).toarray()
+    input_data = preprocess_input(mood, aspect, reason, place, encoder, text_transformer)
+    predicted_index = model.predict(input_data).argmax()
+    return y.unique()[predicted_index]
+
+# Function to preprocess input data
+def preprocess_input(mood, aspect, reason, place, encoder, text_transformer):
+    categorical_data = pd.DataFrame([[mood, aspect, place]], columns=['Mood', 'Aspect', 'Place'])
+    categorical_encoded = encoder.transform(categorical_data).toarray()
+    reason_encoded = text_transformer.transform([reason]).toarray()
+    combined_input = np.concatenate([categorical_encoded, reason_encoded], axis=1)
+    return combined_input
+
+
+with open("emotions.txt", "r") as file:
+    emotions = file.readlines()
+emotions = [emotion.strip() for emotion in emotions]
+
 def handle_user_input():
-    mood, aspect, reason = input("Enter your current mood: ").lower(), input("Enter your aspect: ").lower(), input("Enter the reason for your current mood: ").lower()
-    is_positive_mood = classify_emotion(reason)
-    recommend_activities(is_positive_mood)
+    aspects = ['Mental', 'Physical', 'Emotional', 'Spiritual']
+    print("Select an aspect:")
+    for index, aspect in enumerate(aspects, start=1):
+        print(f"{index}. {aspect}")
+    
+    # Prompt the user to select an aspect
+    aspect_choice = input("Enter the number corresponding to your chosen aspect: ")
+    try:
+        aspect_index = int(aspect_choice) - 1
+        aspect = aspects[aspect_index]
+    except (ValueError, IndexError):
+        print("Invalid aspect selection.")
+        return
+    
+    mood = input("Enter your current mood: ").lower()
+    reason = input("Enter the reason for your current mood: ")
+    place = input("Enter the place you are currently in: ")
+    
+
+    desired_mood = predict_desired_mood(mood, aspect, reason, place)
+    
+    # Determine activities based on desired mood
+    activities = df[df['Desired_Mood'] == desired_mood]['Activities'].iloc[0]
+    
+    if activities:
+        # Shuffle the list
+        random.shuffle(activities)
+        # Print first six activities
+        for activity in activities[:min(6, len(activities))]:
+            print(f"- {activity.strip()}")
+    else:
+        print("No activities found for the selected mood.")
 
 handle_user_input()
+
+
+
