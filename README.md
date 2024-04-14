@@ -15,4 +15,5 @@ View the recommended activities to shift your mood.
 **Data Files**
 activities.txt: Contains a list of activities for mood shifting.
 emotions.txt: Contains a list of emotions for reference.
+requirements.txt: Contains a list of requirements
 mood-shift_saved_model: Saved TensorFlow model for mood predictio
