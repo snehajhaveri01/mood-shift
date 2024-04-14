@@ -67,13 +67,8 @@ model.fit(X_combined, y_encoded, epochs=10, batch_size=1)
 # model.save('mood-shift.keras')
 tf.keras.models.save_model(model, 'mood-shift_saved_model')
 
-# Function to determine if the mood is negative
-def is_negative_mood(mood):
-    negative_emotions = ['sad', 'stressed', 'tired', 'depressed', 'angry']
-    return mood in negative_emotions
-
-# Function to preprocess user input and predict the desired mood
 def predict_desired_mood(mood, aspect, reason, place):
+    # input_data = text_transformer.transform([reason]).toarray()
     input_data = preprocess_input(mood, aspect, reason, place, encoder, text_transformer)
     predicted_index = model.predict(input_data).argmax()
     return y.unique()[predicted_index]
@@ -87,25 +82,36 @@ def preprocess_input(mood, aspect, reason, place, encoder, text_transformer):
     return combined_input
 
 
-positive_emotions = ['joyful', 'motivated', 'energetic', 'happy', 'calm', 'productive']
-negative_emotions = ['sad', 'stressed', 'tired', 'depressed', 'angry']
-
+with open("emotions.txt", "r") as file:
+    emotions = file.readlines()
+emotions = [emotion.strip() for emotion in emotions]
 
 def handle_user_input():
-    mood, aspect, reason, place = input("Enter your current mood: "), input("Enter your aspect: "), input("Enter the reason for your current mood: "), input("Enter the place you are currently in: ")
-    mood = mood.lower()
+    aspects = ['Mental', 'Physical', 'Emotional', 'Spiritual']
+    print("Select an aspect:")
+    for index, aspect in enumerate(aspects, start=1):
+        print(f"{index}. {aspect}")
     
-    # Provide a list of positive emotions for the user to choose from
-    print("Positive emotions you might want to shift into:")
-    for emotion in positive_emotions:
-        print(emotion)
+    # Prompt the user to select an aspect
+    aspect_choice = input("Enter the number corresponding to your chosen aspect: ")
+    try:
+        aspect_index = int(aspect_choice) - 1
+        aspect = aspects[aspect_index]
+    except (ValueError, IndexError):
+        print("Invalid aspect selection.")
+        return
     
-    desired_mood = input("Which positive mood would you like to shift into? ").lower()
+    mood = input("Enter your current mood: ").lower()
+    reason = input("Enter the reason for your current mood: ")
+    place = input("Enter the place you are currently in: ")
+    
 
+    desired_mood = predict_desired_mood(mood, aspect, reason, place)
+    
+    # Determine activities based on desired mood
     activities = df[df['Desired_Mood'] == desired_mood]['Activities'].iloc[0]
     
     if activities:
-        print("To help you achieve a more " + desired_mood + " mood, you might try the following activities:")
         # Shuffle the list
         random.shuffle(activities)
         # Print first six activities
@@ -115,4 +121,6 @@ def handle_user_input():
         print("No activities found for the selected mood.")
 
 handle_user_input()
+
+
 
