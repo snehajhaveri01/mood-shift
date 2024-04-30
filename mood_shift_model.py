@@ -79,9 +79,8 @@ def predict_desired_mood(mood, reason, place, encoder, text_transformer):
     predicted_index = model.predict(input_data).argmax()
     return y.unique()[predicted_index]
 
-with open("emotions.txt", "r") as file:
-    emotions = file.readlines()
-emotions = [emotion.strip() for emotion in emotions]
+with open("emotions.json", "r") as file:
+    emotions = json.load(file)
 
 # Read activities from a JSON file
 with open("sentiments.json", "r") as file:
@@ -103,8 +102,8 @@ def handle_user_input():
         return
     
     # Load emotions based on the aspect selection
-    with open("emotions.txt", "r") as file:
-        emotions_dict = eval(file.read())
+    with open("emotions.json", "r") as file:
+        emotions_dict = json.load(file)
     if aspect.lower() in emotions_dict:
         emotions = emotions_dict[aspect.lower()]
         # Provide emotions based on the aspect selection
