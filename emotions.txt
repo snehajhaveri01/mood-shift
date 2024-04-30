@@ -1,15 +1,44 @@
-Happy
-Sad
-Anxious
-Excited
-Calm
-Angry
-Grateful
-Stressed
-Lonely
-Confident
-Guilty
-Empathetic
-Envious
-Optimistic
-Overwhelmed
+{
+    "physical": [
+        'Energetic',
+        'Fatigued',
+        'Relaxed',
+        'Tense',
+        'Sore',
+        'Alert',
+        'Lethargic',
+        'Flexible',
+        'Achy',
+        'Numb',
+        'Strong',
+        'Weak'
+    ],
+    "mental": [
+        'Stressed',
+        'Focused',
+        'Confused',
+        'Creative',
+        'Exhausted',
+        'Assertive'
+    ],
+    "spiritual": [
+        'Connected',
+        'Grounded',
+        'Seeking',
+        'Surrendered',
+        'Aligned',
+        'Empowered'
+    ],
+    "emotional": [
+        'Happy',
+        'Sad',
+        'Anxious',
+        'Excited',
+        'Surprised',
+        'Angry',
+        'Scared',
+        'Stressed',
+        'Lonely',
+        'Cry',
+    ]
+}

@@ -1,0 +1,543 @@
+[
+    {
+      "id": "1",
+      "title": "Practice Gratitude Journaling",
+      "imageUrl": "https://example.com/gratitude.jpg",
+      "color": "#FFA500",
+      "tag": "Positive Thinking",
+      "link": "https://www.psychologytoday.com/us/blog/what-mentally-strong-people-dont-do/201504/7-scientifically-proven-benefits-gratitude",
+      "instructions": "1. Every day, write down three things you're grateful for. 2. Reflect on why these things bring you joy and how they've positively impacted your life."
+    },
+    {
+      "id": "2",
+      "title": "Engage in Creative Expression",
+      "imageUrl": "https://example.com/creative.jpg",
+      "color": "#FF4500",
+      "tag": "Art Therapy",
+      "link": "https://www.health.harvard.edu/blog/health-benefits-of-expressive-writing-2017101112714",
+      "instructions": "1. Set aside time to engage in a creative activity you enjoy, such as painting, drawing, writing, or crafting. 2. Expressing yourself creatively can help alleviate stress and improve mood."
+    },
+    {
+      "id": "3",
+      "title": "Practice Mindfulness Meditation",
+      "imageUrl": "https://example.com/mindfulness.jpg",
+      "color": "#32CD32",
+      "tag": "Mindfulness",
+      "link": "https://www.mindful.org/how-to-practice-mindfulness/",
+      "instructions": "1. Find a quiet space. 2. Sit comfortably. 3. Focus on your breath. 4. Notice any thoughts or sensations without judgment. 5. Gently bring your attention back to your breath whenever your mind wanders."
+    },
+    {
+      "id": "4",
+      "title": "Connect with Loved Ones",
+      "imageUrl": "https://example.com/loved-ones.jpg",
+      "color": "#4169E1",
+      "tag": "Social Connection",
+      "link": "https://www.healthline.com/health/having-a-healthy-social-life",
+      "instructions": "1. Reach out to friends or family members for a chat, video call, or meet-up. 2. Sharing experiences and emotions with loved ones can provide support and foster feelings of happiness."
+    },
+    {
+      "id": "5",
+      "title": "Practice Positive Affirmations",
+      "imageUrl": "https://example.com/affirmations.jpg",
+      "color": "#FF69B4",
+      "tag": "Self-Love",
+      "link": "https://www.psychologytoday.com/us/blog/smart-relationships/201403/do-self-affirmations-work",
+      "instructions": "1. Repeat affirming statements to yourself. 2. Examples include 'I am worthy,' 'I am capable,' or 'I deserve happiness.' 3. Affirmations can help challenge negative self-talk and promote self-confidence."
+    },
+    {
+      "id": "6",
+      "title": "Engage in Physical Activity",
+      "imageUrl": "https://example.com/physical-activity.jpg",
+      "color": "#008000",
+      "tag": "Exercise",
+      "link": "https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/exercise/art-20048389",
+      "instructions": "1. Go for a walk, jog, bike ride, or participate in a workout class. 2. Physical activity releases endorphins, which can improve mood and reduce feelings of stress and anxiety."
+    },
+    {
+      "id": "7",
+      "title": "Practice Deep Breathing Exercises",
+      "imageUrl": "https://example.com/deep-breathing.jpg",
+      "color": "#800080",
+      "tag": "Relaxation",
+      "link": "https://www.webmd.com/parenting/how-to-deep-breathe",
+      "instructions": "1. Find a quiet spot. 2. Sit or lie comfortably. 3. Close your eyes. 4. Inhale deeply through your nose, expanding your belly. 5. Exhale slowly through your mouth. 6. Repeat for several minutes to induce relaxation."
+    },
+    {
+      "id": "8",
+      "title": "Set Achievable Goals",
+      "imageUrl": "https://example.com/goals.jpg",
+      "color": "#FF0000",
+      "tag": "Personal Growth",
+      "link": "https://www.verywellmind.com/how-to-set-and-reach-your-life-goals-3144616",
+      "instructions": "1. Break down larger goals into smaller, achievable tasks. 2. Celebrate progress along the way. 3. Adjust goals as needed. 4. Working towards meaningful objectives can increase motivation and satisfaction."
+    },
+    {
+      "id": "9",
+      "title": "Limit Screen Time",
+      "imageUrl": "https://example.com/screen-time.jpg",
+      "color": "#800000",
+      "tag": "Digital Detox",
+      "link": "https://www.psychologytoday.com/us/blog/mental-wealth/201402/gray-matters-too-much-screen-time-damages-the-brain",
+      "instructions": "1. Reduce time spent on electronic devices, such as smartphones, computers, and TVs. 2. Allocate screen-free periods for relaxation, hobbies, and socializing to improve overall well-being."
+    },
+    {
+      "id": "10",
+      "title": "Volunteer or Help Others",
+      "imageUrl": "https://example.com/volunteer.jpg",
+      "color": "#FFFF00",
+      "tag": "Community",
+      "link": "https://www.psychologytoday.com/us/blog/what-mentally-strong-people-dont-do/201505/7-ways-help-others-and-boost-your-own-mood",
+      "instructions": "1. Donate your time and skills to a charitable cause or assist someone in need. 2. Helping others can foster a sense of purpose, fulfillment, and connection to the community."
+    },
+    {
+      "id": "11",
+      "title": "Hydrate Well",
+      "imageUrl": "https://example.com/hydration.jpg",
+      "color": "#00FFFF",
+      "tag": "Hydration",
+      "link": "https://www.health.harvard.edu/staying-healthy/the-importance-of-staying-hydrated",
+      "instructions": "1. Drink at least 8 glasses of water a day. 2. Keep a water bottle with you throughout the day to sip on. 3. Avoid excessive caffeine and alcohol consumption, as they can lead to dehydration."
+    },
+    {
+      "id": "12",
+      "title": "Get Quality Sleep",
+      "imageUrl": "https://example.com/sleep.jpg",
+      "color": "#0000FF",
+      "tag": "Sleep",
+      "link": "https://www.nhs.uk/live-well/sleep-and-tiredness/why-lack-of-sleep-is-bad-for-your-health/",
+      "instructions": "1. Aim for 7-9 hours of sleep per night for adults. 2. Establish a consistent sleep schedule by going to bed and waking up at the same time every day. 3. Create a relaxing bedtime routine to signal to your body that it's time to wind down."
+    },
+    {
+      "id": "13",
+      "title": "Eat Nutrient-Dense Foods",
+      "imageUrl": "https://example.com/nutrition.jpg",
+      "color": "#008080",
+      "tag": "Nutrition",
+      "link": "https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/fats-and-cholesterol/",
+      "instructions": "1. Focus on consuming whole foods such as fruits, vegetables, lean proteins, and whole grains. 2. Limit processed foods, sugary snacks, and high-fat foods. 3. Prioritize nutrient-dense options to fuel your body with essential vitamins and minerals."
+    },
+    {
+      "id": "14",
+      "title": "Practice Regular Exercise",
+      "imageUrl": "https://example.com/exercise.jpg",
+      "color": "#FFD700",
+      "tag": "Fitness",
+      "link": "https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/exercise/art-20048389",
+      "instructions": "1. Engage in at least 150 minutes of moderate-intensity aerobic activity or 75 minutes of vigorous-intensity aerobic activity per week. 2. Incorporate strength training exercises at least two days a week to improve muscle strength and endurance. 3. Choose activities you enjoy to make exercise more enjoyable and sustainable."
+    },
+    {
+      "id": "15",
+      "title": "Take Breaks and Stretch",
+      "imageUrl": "https://example.com/stretching.jpg",
+      "color": "#800080",
+      "tag": "Flexibility",
+      "link": "https://www.health.harvard.edu/staying-healthy/the-importance-of-stretching",
+      "instructions": "1. Incorporate regular breaks into your day to stand up and stretch. 2. Focus on stretching major muscle groups, holding each stretch for 15-30 seconds. 3. Stretching can help improve flexibility, reduce muscle tension, and alleviate stiffness."
+    },
+    {
+      "id": "16",
+      "title": "Practice Relaxation Techniques",
+      "imageUrl": "https://example.com/relaxation.jpg",
+      "color": "#A52A2A",
+      "tag": "Stress Relief",
+      "link": "https://www.health.harvard.edu/mind-and-mood/six-relaxation-techniques-to-reduce-stress",
+      "instructions": "1. Try deep breathing exercises, progressive muscle relaxation, or guided imagery to promote relaxation. 2. Set aside time each day for relaxation techniques to reduce stress and anxiety. 3. Experiment with different methods to find what works best for you."
+    },
+    {
+      "id": "17",
+      "title": "Maintain Good Posture",
+      "imageUrl": "https://example.com/posture.jpg",
+      "color": "#696969",
+      "tag": "Ergonomics",
+      "link": "https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/office-ergonomics/art-20046169",
+      "instructions": "1. Sit or stand up straight with your shoulders back and chin parallel to the floor. 2. Keep your feet flat on the ground and distribute your body weight evenly. 3. Avoid slouching or hunching over, especially when sitting for extended periods."
+    },
+    {
+      "id": "18",
+      "title": "Stay Active Throughout the Day",
+      "imageUrl": "https://example.com/active.jpg",
+      "color": "#556B2F",
+      "tag": "Movement",
+      "link": "https://www.healthline.com/nutrition/10-reasons-why-good-sleep-is-important",
+      "instructions": "1. Incorporate movement into your daily routine by taking short walks, using the stairs, or stretching. 2. Set reminders to get up and move every hour, especially if you have a sedentary job. 3. Being active throughout the day can boost energy levels and combat feelings of fatigue."
+    },
+    {
+      "id": "19",
+      "title": "Practice Mindful Eating",
+      "imageUrl": "https://example.com/mindful-eating.jpg",
+      "color": "#4682B4",
+      "tag": "Nutrition",
+      "link": "https://www.health.harvard.edu/staying-healthy/8-steps-to-mindful-eating",
+      "instructions": "1. Pay attention to hunger cues and eat when you're physically hungry, not just out of habit or emotion. 2. Eat slowly and savor each bite, paying attention to taste, texture, and satisfaction. 3. Tune into your body's signals of fullness and stop eating when you're comfortably satisfied."
+    },
+    {
+      "id": "20",
+      "title": "Engage in Outdoor Activities",
+      "imageUrl": "https://example.com/outdoor.jpg",
+      "color": "#32CD32",
+      "tag": "Nature",
+      "link": "https://www.healthline.com/nutrition/11-ways-to-eat-clean",
+      "instructions": "1. Spend time outdoors participating in activities such as hiking, gardening, or playing sports. 2. Fresh air and natural sunlight can boost mood and energy levels. 3. Aim for at least 20-30 minutes of outdoor activity each day."
+    },
+    {
+      "id": "21",
+      "title": "Meditate Daily",
+      "imageUrl": "https://example.com/meditation.jpg",
+      "color": "#9370DB",
+      "tag": "Meditation",
+      "link": "https://www.mindful.org/how-to-practice-mindfulness/",
+      "instructions": "1. Find a quiet and comfortable space. 2. Sit or lie down in a relaxed position. 3. Close your eyes and focus on your breath. 4. Allow thoughts to come and go without judgment. 5. Engage in guided meditation or focus on a mantra for deeper relaxation."
+    },
+    {
+      "id": "22",
+      "title": "Practice Gratitude",
+      "imageUrl": "https://example.com/gratitude.jpg",
+      "color": "#FFA500",
+      "tag": "Thankfulness",
+      "link": "https://greatergood.berkeley.edu/article/item/how_gratitude_changes_you_and_your_brain",
+      "instructions": "1. Keep a gratitude journal and write down three things you're thankful for each day. 2. Reflect on the positive aspects of your life, even during challenging times. 3. Express gratitude to others through words or small gestures of kindness."
+    },
+    {
+      "id": "23",
+      "title": "Connect with Nature",
+      "imageUrl": "https://example.com/nature.jpg",
+      "color": "#228B22",
+      "tag": "Nature",
+      "link": "https://www.nationalgeographic.com/magazine/2016/01/call-to-wild/",
+      "instructions": "1. Spend time outdoors surrounded by nature's beauty. 2. Take leisurely walks in the park, forest, or by the beach. 3. Practice mindfulness and observe the wonders of the natural world."
+    },
+    {
+      "id": "24",
+      "title": "Engage in Spiritual Reading",
+      "imageUrl": "https://example.com/spiritual-reading.jpg",
+      "color": "#8B4513",
+      "tag": "Inspiration",
+      "link": "https://chopra.com/articles/the-benefits-of-spiritual-reading",
+      "instructions": "1. Choose spiritual texts, poetry, or sacred scriptures that resonate with you. 2. Set aside quiet time each day to read and reflect on these writings. 3. Allow the wisdom and insights to guide you on your spiritual journey."
+    },
+    {
+      "id": "25",
+      "title": "Practice Yoga",
+      "imageUrl": "https://example.com/yoga.jpg",
+      "color": "#FFD700",
+      "tag": "Yoga",
+      "link": "https://www.yogajournal.com/",
+      "instructions": "1. Attend yoga classes or follow guided sessions online. 2. Focus on the union of mind, body, and spirit through asanas (poses) and pranayama (breathwork). 3. Cultivate mindfulness and inner peace while nurturing physical and spiritual well-being."
+    },
+    {
+      "id": "26",
+      "title": "Create a Sacred Space",
+      "imageUrl": "https://example.com/sacred-space.jpg",
+      "color": "#CD5C5C",
+      "tag": "Sanctuary",
+      "link": "https://www.mindbodygreen.com/0-26476/how-to-create-a-sacred-space-in-your-home.html",
+      "instructions": "1. Dedicate a quiet corner or room in your home as your sacred space. 2. Decorate it with meaningful objects, such as candles, crystals, or religious symbols. 3. Use this space for meditation, prayer, or quiet reflection to connect with your inner self."
+    },
+    {
+      "id": "27",
+      "title": "Practice Forgiveness",
+      "imageUrl": "https://example.com/forgiveness.jpg",
+      "color": "#FF6347",
+      "tag": "Forgiveness",
+      "link": "https://greatergood.berkeley.edu/article/item/nine_steps_to_forgiveness",
+      "instructions": "1. Reflect on past grievances and the emotions they evoke. 2. Release resentment and anger towards yourself and others. 3. Practice empathy and understanding, acknowledging the humanity in yourself and others."
+    },
+    {
+      "id": "28",
+      "title": "Attend Spiritual Gatherings",
+      "imageUrl": "https://example.com/spiritual-gatherings.jpg",
+      "color": "#800080",
+      "tag": "Community",
+      "link": "https://www.meetup.com/topics/spirituality/",
+      "instructions": "1. Join local spiritual communities, religious services, or meditation groups. 2. Participate in group rituals, ceremonies, or discussions. 3. Connect with like-minded individuals to share experiences and support each other's spiritual growth."
+    },
+    {
+      "id": "29",
+      "title": "Volunteer for a Spiritual Cause",
+      "imageUrl": "https://example.com/spiritual-volunteer.jpg",
+      "color": "#6A5ACD",
+      "tag": "Service",
+      "link": "https://www.volunteermatch.org/",
+      "instructions": "1. Offer your time and skills to support spiritual organizations, charities, or humanitarian efforts. 2. Engage in acts of service and compassion to make a positive impact on others' lives. 3. Find fulfillment and purpose in serving others while deepening your spiritual connection."
+    },
+    {
+      "id": "30",
+      "title": "Practice Mindful Walking",
+      "imageUrl": "https://example.com/mindful-walking.jpg",
+      "color": "#FF8C00",
+      "tag": "Mindfulness",
+      "link": "https://www.mindful.org/a-five-minute-walking-meditation/",
+      "instructions": "1. Take slow, deliberate steps, focusing on each movement and sensation. 2. Pay attention to your surroundings, noticing the sights, sounds, and smells. 3. Allow walking to become a mindful practice, grounding you in the present moment."
+    },
+    {
+      "id": "31",
+      "title": "Journaling",
+      "imageUrl": "https://example.com/journaling.jpg",
+      "color": "#87CEEB",
+      "tag": "Self-Reflection",
+      "link": "https://www.psychologytoday.com/us/blog/hope-relationships/201504/how-writing-can-help-you-recover-trauma",
+      "instructions": "1. Set aside time to write down your thoughts and feelings. 2. Use prompts or free writing to explore your emotions and experiences. 3. Reflect on positive aspects of your life and things you're grateful for."
+    },
+    {
+      "id": "32",
+      "title": "Listen to Music",
+      "imageUrl": "https://example.com/music.jpg",
+      "color": "#FFD700",
+      "tag": "Music Therapy",
+      "link": "https://www.psychologytoday.com/us/basics/music-therapy",
+      "instructions": "1. Create a playlist of songs that uplift your mood and resonate with your emotions. 2. Listen to calming music to reduce stress and anxiety. 3. Dance or sing along to energetic music to release pent-up emotions."
+    },
+    {
+      "id": "33",
+      "title": "Practice Deep Breathing",
+      "imageUrl": "https://example.com/deep-breathing.jpg",
+      "color": "#32CD32",
+      "tag": "Relaxation",
+      "link": "https://www.webmd.com/parenting/how-to-deep-breathe",
+      "instructions": "1. Find a quiet space and sit or lie down comfortably. 2. Close your eyes and take slow, deep breaths in through your nose and out through your mouth. 3. Focus on the rhythm of your breath and feel your body relax with each exhale."
+    },
+    {
+      "id": "34",
+      "title": "Engage in Creative Activities",
+      "imageUrl": "https://example.com/creative.jpg",
+      "color": "#FF4500",
+      "tag": "Art Therapy",
+      "link": "https://www.arttherapy.org/what-is-art-therapy/",
+      "instructions": "1. Express yourself through art, such as drawing, painting, or sculpting. 2. Write poetry, stories, or journal entries to process your emotions. 3. Engage in crafting or DIY projects to channel your energy into something constructive."
+    },
+    {
+      "id": "35",
+      "title": "Connect with a Friend",
+      "imageUrl": "https://example.com/friendship.jpg",
+      "color": "#4169E1",
+      "tag": "Social Support",
+      "link": "https://www.psychologytoday.com/us/basics/social-support",
+      "instructions": "1. Reach out to a trusted friend or loved one for support and understanding. 2. Share your feelings and concerns openly, and listen empathetically to their experiences as well. 3. Spend quality time together engaging in activities you both enjoy."
+    },
+    {
+      "id": "36",
+      "title": "Practice Mindfulness",
+      "imageUrl": "https://example.com/mindfulness.jpg",
+      "color": "#696969",
+      "tag": "Mindfulness",
+      "link": "https://www.mindful.org/meditation/mindfulness-getting-started/",
+      "instructions": "1. Ground yourself in the present moment by focusing on your senses. 2. Notice the sensations in your body, sounds in your environment, and thoughts in your mind without judgment. 3. Accept your emotions as they are and practice self-compassion."
+    },
+    {
+      "id": "37",
+      "title": "Go for a Walk",
+      "imageUrl": "https://example.com/walk.jpg",
+      "color": "#228B22",
+      "tag": "Nature",
+      "link": "https://www.health.harvard.edu/staying-healthy/5-surprising-benefits-of-walking",
+      "instructions": "1. Step outside and take a leisurely walk in nature or around your neighborhood. 2. Focus on the sights, sounds, and sensations around you to distract from negative thoughts. 3. Engage in mindful walking by paying attention to each step and the movement of your body."
+    },
+    {
+      "id": "38",
+      "title": "Practice Gratitude",
+      "imageUrl": "https://example.com/gratitude.jpg",
+      "color": "#FFA500",
+      "tag": "Positive Thinking",
+      "link": "https://greatergood.berkeley.edu/article/item/tips_for_keeping_a_gratitude_journal",
+      "instructions": "1. Take a moment to reflect on things you're grateful for, no matter how small. 2. Write them down in a gratitude journal or simply say them out loud. 3. Shifting your focus to the positive can help reframe your mindset and improve your mood."
+    },
+    {
+      "id": "39",
+      "title": "Engage in Physical Activity",
+      "imageUrl": "https://example.com/physical-activity.jpg",
+      "color": "#FF0000",
+      "tag": "Exercise",
+      "link": "https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/exercise/art-20048389",
+      "instructions": "1. Move your body through activities like walking, jogging, yoga, or dancing. 2. Physical activity releases endorphins, which can boost mood and reduce feelings of stress and anxiety. 3. Aim for at least 30 minutes of exercise most days of the week for maximum benefits."
+    },
+    {
+      "id": "40",
+      "title": "Practice Self-Compassion",
+      "imageUrl": "https://example.com/self-compassion.jpg",
+      "color": "#800080",
+      "tag": "Self-Care",
+      "link": "https://self-compassion.org/the-three-elements-of-self-compassion-2/",
+      "instructions": "1. Treat yourself with kindness and understanding, as you would a good friend. 2. Acknowledge your struggles and validate your emotions without judgment. 3. Practice self-care activities that nourish your body, mind, and soul."
+    },
+    {
+      "id": "41",
+      "title": "Practice Progressive Muscle Relaxation",
+      "imageUrl": "https://example.com/progressive-muscle-relaxation.jpg",
+      "color": "#87CEEB",
+      "tag": "Relaxation",
+      "link": "https://www.verywellmind.com/how-to-reduce-stress-with-progressive-muscle-relaxation-3144508",
+      "instructions": "1. Find a comfortable position and close your eyes. 2. Starting with your toes, tense each muscle group for 5-10 seconds. 3. Release the tension and notice the sensation of relaxation. 4. Work your way up through your body, tensing and relaxing each muscle group."
+    },
+    {
+      "id": "42",
+      "title": "Engage in Box Breathing",
+      "imageUrl": "https://example.com/box-breathing.jpg",
+      "color": "#FFD700",
+      "tag": "Breathing Exercise",
+      "link": "https://www.healthline.com/health/box-breathing",
+      "instructions": "1. Sit comfortably with your back straight. 2. Inhale deeply through your nose for a count of four. 3. Hold your breath for a count of four. 4. Exhale slowly through your mouth for a count of four. 5. Repeat this cycle for several minutes, focusing on the rhythm of your breath."
+    },
+    {
+      "id": "43",
+      "title": "Create a Vision Board",
+      "imageUrl": "https://example.com/vision-board.jpg",
+      "color": "#32CD32",
+      "tag": "Visualization",
+      "link": "https://www.oprahmag.com/life/a30144693/how-to-make-a-vision-board/",
+      "instructions": "1. Gather magazines, images, and quotes that inspire you. 2. Arrange them on a poster board or digital platform to represent your goals and dreams. 3. Place your vision board where you can see it daily to stay motivated and focused on your aspirations."
+    },
+    {
+      "id": "44",
+      "title": "Practice Loving-Kindness Meditation",
+      "imageUrl": "https://example.com/loving-kindness-meditation.jpg",
+      "color": "#FF4500",
+      "tag": "Meditation",
+      "link": "https://ggia.berkeley.edu/practice/loving_kindness_meditation",
+      "instructions": "1. Find a comfortable meditation posture and close your eyes. 2. Begin by sending wishes of love and kindness to yourself, such as 'May I be happy, may I be healthy.' 3. Extend these wishes to loved ones, acquaintances, and even difficult individuals. 4. Imagine each person surrounded by love and well-being."
+    },
+    {
+      "id": "45",
+      "title": "Engage in a Random Act of Kindness",
+      "imageUrl": "https://example.com/random-act-of-kindness.jpg",
+      "color": "#4169E1",
+      "tag": "Kindness",
+      "link": "https://www.randomactsofkindness.org/",
+      "instructions": "1. Look for opportunities to help others without expecting anything in return. 2. Hold the door open for someone, compliment a stranger, or pay for someone's coffee. 3. Acts of kindness can boost your mood and create a ripple effect of positivity in the world."
+    },
+    {
+      "id": "46",
+      "title": "Practice Guided Imagery",
+      "imageUrl": "https://example.com/guided-imagery.jpg",
+      "color": "#8B4513",
+      "tag": "Visualization",
+      "link": "https://www.mindful.org/how-to-practice-guided-imagery/",
+      "instructions": "1. Find a quiet space where you won't be disturbed. 2. Close your eyes and take a few deep breaths to relax. 3. Imagine yourself in a peaceful and serene place, using all your senses to create a vivid mental image. 4. Stay in this visualization for several minutes, soaking in the positive emotions it evokes."
+    },
+    {
+      "id": "47",
+      "title": "Attend a Laughter Yoga Session",
+      "imageUrl": "https://example.com/laughter-yoga.jpg",
+      "color": "#FF6347",
+      "tag": "Laughter",
+      "link": "https://laughteryoga.org/",
+      "instructions": "1. Join a laughter yoga class or find online sessions. 2. Participate in laughter exercises and breathing techniques to induce genuine laughter. 3. Laughter yoga can reduce stress, improve mood, and boost your immune system."
+    },
+    {
+      "id": "48",
+      "title": "Explore Aromatherapy",
+      "imageUrl": "https://example.com/aromatherapy.jpg",
+      "color": "#800080",
+      "tag": "Wellness",
+      "link": "https://www.healthline.com/health/what-is-aromatherapy",
+      "instructions": "1. Choose essential oils known for their mood-enhancing properties, such as lavender, citrus, or peppermint. 2. Use a diffuser to fill your space with uplifting scents or add a few drops to a warm bath. 3. Practice deep breathing while inhaling the aroma to promote relaxation and emotional well-being."
+    },
+    {
+      "id": "49",
+      "title": "Engage in a Creative Writing Exercise",
+      "imageUrl": "https://example.com/creative-writing.jpg",
+      "color": "#4682B4",
+      "tag": "Expression",
+      "link": "https://www.writersdigest.com/write-better-poetry/7-ways-to-use-creative-writing-prompts-to-spark-your-writing",
+      "instructions": "1. Choose a writing prompt or topic that resonates with you. 2. Set a timer and write continuously without worrying about grammar or punctuation. 3. Allow your thoughts and emotions to flow onto the page, exploring themes of hope, resilience, or healing."
+    },
+    {
+      "id": "50",
+      "title": "Engage in a Digital Detox",
+      "imageUrl": "https://example.com/digital-detox.jpg",
+      "color": "#32CD32",
+      "tag": "Wellness",
+      "link": "https://www.psychologytoday.com/us/basics/digital-detox",
+      "instructions": "1. Disconnect from electronic devices such as smartphones, computers, and TVs. 2. Spend time outdoors, engage in hobbies, or connect face-to-face with loved ones. 3. A digital detox can reduce stress, improve sleep quality, and foster deeper connections."
+    },
+    {
+      "id": "51",
+      "title": "Practice Self-Compassion",
+      "imageUrl": "https://example.com/self-compassion.jpg",
+      "color": "#87CEEB",
+      "tag": "Self-Care",
+      "link": "https://self-compassion.org/the-three-elements-of-self-compassion-2/",
+      "instructions": "1. Treat yourself with kindness and understanding, as you would a good friend. 2. Acknowledge your struggles and validate your emotions without judgment. 3. Practice self-care activities that nourish your body, mind, and soul."
+    },
+    {
+      "id": "52",
+      "title": "Connect with a Therapist or Counselor",
+      "imageUrl": "https://example.com/therapy.jpg",
+      "color": "#FFD700",
+      "tag": "Therapy",
+      "link": "https://www.psychologytoday.com/us/therapists",
+      "instructions": "1. Seek professional support from a licensed therapist or counselor. 2. Talk openly about your emotions, concerns, and challenges. 3. Explore coping strategies and techniques to improve emotional well-being."
+    },
+    {
+      "id": "53",
+      "title": "Engage in Emotional Freedom Technique (EFT)",
+      "imageUrl": "https://example.com/eft.jpg",
+      "color": "#32CD32",
+      "tag": "Wellness",
+      "link": "https://www.healthline.com/health/eft-tapping",
+      "instructions": "1. Learn and practice tapping on specific acupressure points while focusing on emotional issues. 2. Use affirmations and statements to address negative emotions and promote self-acceptance. 3. EFT can help release emotional blocks and restore balance to your energy system."
+    },
+    {
+      "id": "54",
+      "title": "Practice Emotional Awareness",
+      "imageUrl": "https://example.com/emotional-awareness.jpg",
+      "color": "#FF4500",
+      "tag": "Self-Reflection",
+      "link": "https://www.helpguide.org/articles/mental-health/emotional-intelligence-toolkit.htm",
+      "instructions": "1. Take time to identify and label your emotions as they arise. 2. Reflect on the underlying causes and triggers of your emotions. 3. Practice mindfulness to observe your thoughts and feelings without judgment."
+    },
+    {
+      "id": "55",
+      "title": "Create a Feelings Wheel",
+      "imageUrl": "https://example.com/feelings-wheel.jpg",
+      "color": "#4169E1",
+      "tag": "Self-Reflection",
+      "link": "https://www.therapistaid.com/worksheets/feelings-wheel.pdf",
+      "instructions": "1. Use a feelings wheel or chart to explore and identify your emotions. 2. Connect with the nuances and variations of different emotional states. 3. Express your feelings through journaling, art, or verbal communication."
+    },
+    {
+      "id": "56",
+      "title": "Engage in Emotional Release Exercises",
+      "imageUrl": "https://example.com/emotional-release.jpg",
+      "color": "#8B4513",
+      "tag": "Release",
+      "link": "https://www.psychologytoday.com/us/blog/the-empowerment-diary/201905/7-tips-emotional-release",
+      "instructions": "1. Allow yourself to express emotions through crying, shouting, or physical movement. 2. Practice deep breathing to calm your nervous system and regulate intense emotions. 3. Engage in activities like journaling or art to process and release pent-up feelings."
+    },
+    {
+      "id": "57",
+      "title": "Practice Gratitude Journaling",
+      "imageUrl": "https://example.com/gratitude-journal.jpg",
+      "color": "#FF6347",
+      "tag": "Gratitude",
+      "link": "https://positivepsychology.com/gratitude-journal/",
+      "instructions": "1. Dedicate time each day to write down things you're grateful for. 2. Reflect on positive experiences, relationships, and personal strengths. 3. Gratitude journaling can shift your focus towards the positive and improve emotional well-being."
+    },
+    {
+      "id": "58",
+      "title": "Engage in Self-Reflection",
+      "imageUrl": "https://example.com/self-reflection.jpg",
+      "color": "#800080",
+      "tag": "Self-Discovery",
+      "link": "https://www.mindtools.com/pages/article/newTED_91.htm",
+      "instructions": "1. Set aside quiet time for introspection and self-exploration. 2. Reflect on your values, beliefs, and life goals. 3. Consider journaling or meditation to deepen your understanding of yourself and your emotions."
+    },
+    {
+      "id": "59",
+      "title": "Establish Healthy Boundaries",
+      "imageUrl": "https://example.com/boundaries.jpg",
+      "color": "#4682B4",
+      "tag": "Self-Care",
+      "link": "https://www.psychologytoday.com/us/basics/boundaries",
+      "instructions": "1. Identify your needs, values, and limits in different relationships and situations. 2. Communicate assertively and respectfully to set boundaries that protect your emotional well-being. 3. Practice self-care and prioritize your mental health by enforcing boundaries that honor your needs."
+    },
+    {
+      "id": "60",
+      "title": "Connect with Supportive Relationships",
+      "imageUrl": "https://example.com/supportive-relationships.jpg",
+      "color": "#32CD32",
+      "tag": "Social Support",
+      "link": "https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/social-support/art-20044445",
+      "instructions": "1. Cultivate relationships with friends, family members, or support groups who provide emotional validation and empathy. 2. Share your feelings openly and listen compassionately to others. 3. Surround yourself with individuals who uplift and support your emotional well-being."
+    }
+  ]
+  

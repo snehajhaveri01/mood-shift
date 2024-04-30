@@ -4,17 +4,17 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
 import tensorflow as tf
-import random
+import json
 
 # Sample Data
 data = {
     'User': ['John', 'Alice', 'Bob', 'Emily', 'David', 'Sara'],
-    'Mood': ['sad', 'stressed', 'tired', 'depressed', 'angry', 'relaxed'],
+    'Mood': ['sad', 'exhausted', 'weak', 'angry', 'stressed', 'numb'],
     'Aspect': ['Emotional', 'Mental', 'Physical', 'Emotional', 'Mental', 'Physical'],
     'Reasons': ['Mourned a personal achievement', 'Work deadlines and pressure', 'Lack of sleep',
                 'Received bad news', 'Conflict at work', 'Just finished a workout'],
     'Place': ['home', 'work', 'personal', 'home', 'work', 'personal'],
-    'Desired_Mood': ['joyful', 'motivated', 'energetic', 'happy', 'calm', 'productive']
+    'Desired_Mood': ['happy', 'relaxed', 'flexible', 'focused', 'assertive', 'connected'],
 }
 
 df = pd.DataFrame(data)
@@ -23,10 +23,9 @@ df = pd.DataFrame(data)
 for column in ['Mood', 'Aspect', 'Place', 'Desired_Mood']:
     df[column] = df[column].str.lower()
 
-# Read activities from a text file
-with open("activities.txt", "r") as file:
-    activities = file.readlines()
-activities = [activity.strip() for activity in activities]
+# Read activities from a JSON file
+with open("updated_activities.json", "r") as file:
+    activities = json.load(file)
 
 # Add activities to the dataframe
 df['Activities'] = [activities] * len(df)
@@ -67,24 +66,26 @@ model.fit(X_combined, y_encoded, epochs=10, batch_size=1)
 # model.save('mood-shift.keras')
 tf.keras.models.save_model(model, 'mood-shift_saved_model')
 
-def predict_desired_mood(mood, aspect, reason, place):
-    # input_data = text_transformer.transform([reason]).toarray()
-    input_data = preprocess_input(mood, aspect, reason, place, encoder, text_transformer)
-    predicted_index = model.predict(input_data).argmax()
-    return y.unique()[predicted_index]
-
 # Function to preprocess input data
-def preprocess_input(mood, aspect, reason, place, encoder, text_transformer):
-    categorical_data = pd.DataFrame([[mood, aspect, place]], columns=['Mood', 'Aspect', 'Place'])
+def preprocess_input(mood, reason, place, encoder, text_transformer):
+    categorical_data = pd.DataFrame([[mood, None, place]], columns=['Mood', 'Aspect', 'Place'])
     categorical_encoded = encoder.transform(categorical_data).toarray()
     reason_encoded = text_transformer.transform([reason]).toarray()
     combined_input = np.concatenate([categorical_encoded, reason_encoded], axis=1)
     return combined_input
 
+def predict_desired_mood(mood, reason, place, encoder, text_transformer):
+    input_data = preprocess_input(mood, reason, place, encoder, text_transformer)
+    predicted_index = model.predict(input_data).argmax()
+    return y.unique()[predicted_index]
 
 with open("emotions.txt", "r") as file:
     emotions = file.readlines()
 emotions = [emotion.strip() for emotion in emotions]
+
+# Read activities from a JSON file
+with open("sentiments.json", "r") as file:
+    sentiments = json.load(file)
 
 def handle_user_input():
     aspects = ['Mental', 'Physical', 'Emotional', 'Spiritual']
@@ -101,26 +102,70 @@ def handle_user_input():
         print("Invalid aspect selection.")
         return
     
-    mood = input("Enter your current mood: ").lower()
+    # Load emotions based on the aspect selection
+    with open("emotions.txt", "r") as file:
+        emotions_dict = eval(file.read())
+    if aspect.lower() in emotions_dict:
+        emotions = emotions_dict[aspect.lower()]
+        # Provide emotions based on the aspect selection
+        print("Select an emotion:")
+        for index, emotion in enumerate(emotions, start=1):
+            print(f"{index}. {emotion}")
+        emotion_choice = input("Enter the number corresponding to your chosen emotion: ")
+        try:
+            emotion_index = int(emotion_choice) - 1
+            mood = emotions[emotion_index]
+            get_sentiment(mood, sentiments)
+        except (ValueError, IndexError):
+            print("Invalid emotion selection.")
+            return
+    else:
+        print("No emotions found for the selected aspect.")
+        return
+  
+
+def get_sentiment(mood, sentiments):
     reason = input("Enter the reason for your current mood: ")
     place = input("Enter the place you are currently in: ")
-    
+    mood = mood.lower()
+    if mood in sentiments['Positive']:
+        print('Hey, I am so happy that you are feeling good, hoping that you continue to be good')
+        return  # Return after printing the message
+    elif mood in sentiments['Negative']:
+        desired_mood = predict_desired_mood(mood, reason, place, encoder, text_transformer)
+        
+        # Determine activities based on desired mood
+        activities = df[df['Desired_Mood'] == desired_mood]['Activities'].iloc[0]
+        
+        if activities:
+            # Print activities in the specified format
+            num_displayed_activities = 0
+            for activity in activities:
+                if num_displayed_activities == 6:
+                    break
+                title = activity.get("title", "")
+                print(f"{num_displayed_activities+1}. {title}")
+                num_displayed_activities += 1
+            
+            activity_choice = input("Enter the number corresponding to your chosen activity: ")
+            try:
+                activity_index = int(activity_choice) - 1
+                selected_activity = activities[activity_index]
+                title = selected_activity.get("title", "")
+                instructions = selected_activity.get("instructions", "")
+                link = selected_activity.get("link", "")
+                print(f"Title: {title}")
+                print(f"Instructions: {instructions}")
+                print(f"Link: {link}")
+            except (ValueError, IndexError):
+                print("Invalid activity selection.")
+        else:
+            print("No activities found for the selected mood.")
 
-    desired_mood = predict_desired_mood(mood, aspect, reason, place)
-    
-    # Determine activities based on desired mood
-    activities = df[df['Desired_Mood'] == desired_mood]['Activities'].iloc[0]
-    
-    if activities:
-        # Shuffle the list
-        random.shuffle(activities)
-        # Print first six activities
-        for activity in activities[:min(6, len(activities))]:
-            print(f"- {activity.strip()}")
-    else:
-        print("No activities found for the selected mood.")
+
 
 handle_user_input()
+
 
 
 
