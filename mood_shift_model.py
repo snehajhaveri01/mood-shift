@@ -155,9 +155,13 @@ def get_sentiment(mood, sentiments):
                 title = selected_activity.get("title", "")
                 instructions = selected_activity.get("instructions", "")
                 link = selected_activity.get("link", "")
+                imageUrl = selected_activity.get("imageUrl", "")
+                color = selected_activity.get("color","")
                 print(f"Title: {title}")
                 print(f"Instructions: {instructions}")
                 print(f"Link: {link}")
+                print(f"Image: {imageUrl}")
+                print(f"Color: {color}")
             except (ValueError, IndexError):
                 print("Invalid activity selection.")
         else:
