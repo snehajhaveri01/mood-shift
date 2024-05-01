@@ -5,6 +5,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
 import tensorflow as tf
 import json
+import random
 
 # Sample Data
 data = {
@@ -64,7 +65,7 @@ y_encoded = pd.factorize(y)[0]
 model.fit(X_combined, y_encoded, epochs=10, batch_size=1)
 
 # model.save('mood-shift.keras')
-tf.keras.models.save_model(model, 'mood-shift_saved_model')
+tf.keras.models.save_model(model, 'mood_shift_saved_model')
 
 # Function to preprocess input data
 def preprocess_input(mood, reason, place, encoder, text_transformer):
@@ -138,6 +139,7 @@ def get_sentiment(mood, sentiments):
         
         if activities:
             # Print activities in the specified format
+            random.shuffle(activities)
             num_displayed_activities = 0
             for activity in activities:
                 if num_displayed_activities == 6:
