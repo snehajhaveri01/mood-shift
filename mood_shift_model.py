@@ -138,6 +138,7 @@ def get_sentiment(mood, sentiments):
         activities = df[df['Desired_Mood'] == desired_mood]['Activities'].iloc[0]
         
         if activities:
+           if isinstance(activities, list):
             # Print activities in the specified format
             random.shuffle(activities)
             num_displayed_activities = 0
