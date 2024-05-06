@@ -11,7 +11,6 @@ logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
 
-
 # Load the pre-trained model and transformers
 def load_resources():
     custom_model = tf.keras.models.load_model('saved_model')
@@ -21,9 +20,7 @@ def load_resources():
         entry_transformer = pickle.load(f)
     return custom_model, input_encoder, entry_transformer
 
-
 model, encoder, text_transformer = load_resources()
-
 
 # Load and prepare data
 def load_data():
@@ -43,9 +40,7 @@ def load_data():
     data_frame['Activities'] = [activities] * len(data_frame)
     return data_frame
 
-
 df = load_data()
-
 
 # Preprocess input data
 def preprocess_input(mood, aspect, reason, place):
@@ -79,13 +74,11 @@ def api_predict_mood():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-
 # Retrieve suggested activities
 def get_suggested_activities(desired_mood):
     activities = df[df['Desired_Mood'] == desired_mood]['Activities'].iloc[0]
     random.shuffle(activities)
     return activities[:6]
-
 
 @app.route('/get_activities', methods=['POST'])
 def api_get_activities():
@@ -95,7 +88,6 @@ def api_get_activities():
         return jsonify({'activities': suggested_activities})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0', port=5004)
