@@ -17,7 +17,7 @@ def load_resources():
     model = tf.keras.models.load_model('saved_model')
     # Load model in H5 format
     # model = tf.keras.models.load_model('saved_model.h5')
-    
+
     with open('encoder.pkl', 'rb') as f:
         encoder = pickle.load(f)
     with open('text_transformer.pkl', 'rb') as f:
@@ -81,6 +81,17 @@ def predict_and_suggest_activities(aspect, mood, place, reason):
     return "Keep up the good vibes!"
 
 
+# create health check endpoint
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({'status': 'ok'})
+
+
+@app.route('/')
+def index():
+    return 'Welcome to Mood Shift!'
+
+
 @app.route('/get_activities', methods=['POST'])
 def api_get_activities():
     data = request.get_json()
@@ -112,4 +123,4 @@ def load_sentiments(filename='sentiments.json'):
 sentiments = load_sentiments()
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=False)
