@@ -8,7 +8,6 @@ import tensorflow as tf
 import json
 import random
 
-
 # Load and prepare data
 def load_and_prepare_data():
     data = {
@@ -56,6 +55,9 @@ def train_model(df):
 
     # Save the model and preprocessors
     model.save('saved_model')
+    # Save model in H5 format
+    model.save('saved_model.h5', save_format='h5')
+    
     with open('encoder.pkl', 'wb') as f:
         pickle.dump(encoder, f)
     with open('text_transformer.pkl', 'wb') as f:

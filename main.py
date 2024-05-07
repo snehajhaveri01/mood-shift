@@ -15,6 +15,9 @@ app = Flask(__name__)
 # Load the pre-trained model and transformers
 def load_resources():
     model = tf.keras.models.load_model('saved_model')
+    # Load model in H5 format
+    # model = tf.keras.models.load_model('saved_model.h5')
+    
     with open('encoder.pkl', 'rb') as f:
         encoder = pickle.load(f)
     with open('text_transformer.pkl', 'rb') as f:
