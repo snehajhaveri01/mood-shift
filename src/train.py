@@ -1,3 +1,4 @@
+import os
 import pickle
 import pandas as pd
 import numpy as np
@@ -7,6 +8,8 @@ from sklearn.pipeline import Pipeline
 import tensorflow as tf
 import json
 import random
+
+from convert import convert_model
 
 
 # Load and prepare data
@@ -22,7 +25,7 @@ def load_and_prepare_data():
     }
     df = pd.DataFrame(data)
 
-    with open("activities.json", "r") as file:
+    with open("model_samples/activities.json", "r") as file:
         activities = json.load(file)
     df['Activities'] = [activities] * len(df)
     return df
@@ -54,11 +57,23 @@ def train_model(df):
     model = build_and_compile_model(x_combined.shape[1], len(np.unique(y_encoded)))
     model.fit(x_combined, y_encoded, epochs=10, batch_size=1)
 
+    print("Model trained successfully.")
+
     # Save the model and preprocessors
     model.save('saved_model')
-    with open('encoder.pkl', 'wb') as f:
+    # Save model in H5 format
+    model.save('model_files/saved_model.h5', save_format='h5')
+    print("h5 Model saved successfully.")
+
+    if 'saved_model' in os.listdir():
+        convert_model()
+        print("TF lite Model saved successfully.")
+    else:
+        print("Model not saved.")
+
+    with open('model_files/encoder.pkl', 'wb') as f:
         pickle.dump(encoder, f)
-    with open('text_transformer.pkl', 'wb') as f:
+    with open('model_files/text_transformer.pkl', 'wb') as f:
         pickle.dump(text_transformer, f)
 
     return model, encoder, text_transformer
@@ -93,11 +108,11 @@ def load_sentiments(filename):
 
 
 # Load sentiments
-sentiments = load_sentiments('sentiments.json')
+sentiments = load_sentiments('model_samples/sentiments.json')
 
 
 # Main function to run training and prediction
-def main():
+def perform_training():
     df = load_and_prepare_data()
     model, encoder, text_transformer = train_model(df)
 
@@ -124,4 +139,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    perform_training()
