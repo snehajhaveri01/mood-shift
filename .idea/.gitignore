@@ -1,0 +1,34 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# pycache
+__pycache__/
+# Jupyter Notebook
+.ipynb_checkpoints/
+# User-specific configurations
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/jsLibraryMappings.xml
+.idea/jsLibrarySources.xml
+.idea/shelf
+.idea/dataSources
+.idea/dataSources.local.xml
+.idea/sqlDataSources
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/gradle.xml
+.idea/libraries
+
+# conda environment
+.conda/
+.env/
+.venv/
+env/
+
+
