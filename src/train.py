@@ -11,6 +11,11 @@ import random
 
 from convert import convert_model
 
+# Path constants based on the project directory structure
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# MODEL_DIR = os.path.join(BASE_DIR, 'model_files')
+# SAMPLE_DIR = os.path.join(BASE_DIR, 'model_samples')
+
 
 # Load and prepare data
 def load_and_prepare_data():
@@ -62,7 +67,7 @@ def train_model(df):
     # Save the model and preprocessors
     model.save('saved_model')
     # Save model in H5 format
-    model.save('model_files/saved_model.h5', save_format='h5')
+    model.save('model_files/mood-shift.h5', save_format='h5')
     print("h5 Model saved successfully.")
 
     if 'saved_model' in os.listdir():

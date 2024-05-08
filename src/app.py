@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 import tensorflow as tf
@@ -5,26 +6,40 @@ import pickle
 import json
 import random
 
+# Path constants based on the project directory structure
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, 'model_files')
+SAMPLE_DIR = os.path.join(BASE_DIR, 'model_samples')
+
 
 # Load the pre-trained model and transformers
 def load_resources():
-    # model = tf.keras.models.load_model('model_files/saved_model')
-    # load h5 model from model_files/saved_model.h5
-    model = tf.keras.models.load_model('src/model_files/saved_model.h5')
-    # load tflite model
-    # model = tf.lite.Interpreter(model_path='model_files/mood-shift.tflite')
-    with open('src/model_files/encoder.pkl', 'rb') as f:
-        encoder = pickle.load(f)
-    with open('src/model_files/text_transformer.pkl', 'rb') as f:
-        text_transformer = pickle.load(f)
-    return model, encoder, text_transformer
+    try:
+        # can load other model types here
+        model_path = os.path.join(MODEL_DIR, 'saved_model.h5')  # Adjust path for different model types
+        loaded_model = tf.keras.models.load_model(model_path)
+        print("Model loaded successfully.") if loaded_model else print("Model not loaded.")
+
+        encoder_path = os.path.join(MODEL_DIR, 'encoder.pkl')
+        with open(encoder_path, 'rb') as f:
+            loaded_encoder = pickle.load(f)
+
+        text_transformer_path = os.path.join(MODEL_DIR, 'text_transformer.pkl')
+        with open(text_transformer_path, 'rb') as f:
+            loaded_text_transformer = pickle.load(f)
+
+        return loaded_model, loaded_encoder, loaded_text_transformer
+    except Exception as e:
+        print("Error loading resources:", e)
+        return None, None, None
 
 
 model, encoder, text_transformer = load_resources()
 
 
 def load_data():
-    with open("src/model_samples/activities.json", "r") as file:
+    activities_path = os.path.join(SAMPLE_DIR, 'activities.json')
+    with open(activities_path, "r") as file:
         activities = json.load(file)
     data = {
         'Aspect': ['Emotional', 'Mental', 'Physical', 'Emotional', 'Mental', 'Physical'],
@@ -34,9 +49,9 @@ def load_data():
                     'Received bad news', 'Conflict at work', 'Just finished a workout'],
         'Desired_Mood': ['happy', 'relaxed', 'flexible', 'focused', 'assertive', 'connected'],
     }
-    df = pd.DataFrame(data)
-    df['Activities'] = [activities] * len(df)
-    return df
+    loaded_df = pd.DataFrame(data)
+    loaded_df['Activities'] = [activities] * len(loaded_df)
+    return loaded_df
 
 
 df = load_data()
@@ -60,7 +75,7 @@ def predict_mood(x_combined):
     return np.argmax(predictions)
 
 
-def predict_and_suggest_activities(aspect, mood, place, reason, sentiments):
+def predict_and_suggest_activities(aspect, mood, place, reason):
     if mood.lower() in sentiments['Negative']:
         x_combined = preprocess_input(aspect, mood, place, reason)
         mood_index = predict_mood(x_combined)
@@ -71,8 +86,9 @@ def predict_and_suggest_activities(aspect, mood, place, reason, sentiments):
     return "Keep up the good vibes!"
 
 
-def load_sentiments(filename='src/model_samples/sentiments.json'):
-    with open(filename, 'r') as file:
+def load_sentiments():
+    sentiments_path = os.path.join(SAMPLE_DIR, 'sentiments.json')
+    with open(sentiments_path, 'r') as file:
         return json.load(file)
 
 
