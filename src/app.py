@@ -16,9 +16,15 @@ SAMPLE_DIR = os.path.join(BASE_DIR, 'model_samples')
 def load_resources():
     try:
         # can load other model types here
-        model_path = os.path.join(MODEL_DIR, 'saved_model.h5')  # Adjust path for different model types
-        loaded_model = tf.keras.models.load_model(model_path)
-        print("Model loaded successfully.") if loaded_model else print("Model not loaded.")
+        # model_path = os.path.join(MODEL_DIR, 'saved_model.h5')  # Adjust path for different model types
+        # loaded_model = tf.keras.models.load_model(model_path)
+        # print("Model loaded successfully.") if loaded_model else print("Model not loaded.")
+
+        model_path = os.path.join(MODEL_DIR, 'mood-shift.tflite')
+        # Load the TFLite model
+        interpreter = tf.lite.Interpreter(model_path=model_path)
+        interpreter.allocate_tensors()
+        print("Model loaded successfully.") if interpreter else print("Model not loaded.")
 
         encoder_path = os.path.join(MODEL_DIR, 'encoder.pkl')
         with open(encoder_path, 'rb') as f:
@@ -28,7 +34,7 @@ def load_resources():
         with open(text_transformer_path, 'rb') as f:
             loaded_text_transformer = pickle.load(f)
 
-        return loaded_model, loaded_encoder, loaded_text_transformer
+        return interpreter, loaded_encoder, loaded_text_transformer
     except Exception as e:
         print("Error loading resources:", e)
         return None, None, None
@@ -70,9 +76,24 @@ def preprocess_input(aspect, mood, place, reason):
     return x_combined
 
 
+# def predict_mood(x_combined):
+#     predictions = model.predict(x_combined)
+#     return np.argmax(predictions)
+
 def predict_mood(x_combined):
-    predictions = model.predict(x_combined)
-    return np.argmax(predictions)
+    # Get input and output tensors.
+    input_details = model.get_input_details()
+    output_details = model.get_output_details()
+
+    # Set the value of the input tensor
+    model.set_tensor(input_details[0]['index'], x_combined.astype(np.float32))
+
+    # Run the inference
+    model.invoke()
+
+    # Extract the output
+    output_data = model.get_tensor(output_details[0]['index'])
+    return np.argmax(output_data)
 
 
 def predict_and_suggest_activities(aspect, mood, place, reason):
