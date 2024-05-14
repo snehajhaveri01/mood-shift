@@ -4,7 +4,7 @@
     "title": "Lift Weights, Lift Spirits",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical health",
+    "aspect": "Physical",
     "link": "https://www.acefitness.org/education-and-resources/lifestyle/blog/5768/4-benefits-of-weightlifting-that-have-nothing-to-do-with-size/",
     "instructions": [
       "Step 1: Warm up your muscles with light cardio exercises for 5-10 minutes.",
@@ -18,7 +18,7 @@
     "title": "Invigorate Your Shower Routine",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical well-being",
+    "aspect": "Physical",
     "link": "https://www.self.com/story/cold-shower-benefits",
     "instructions": [
       "Step 1: Start with a warm shower to relax your muscles and open pores.",
@@ -32,7 +32,7 @@
     "title": "Stay Hydrated, Stay Healthy",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical health",
+    "aspect": "Physical",
     "link": "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/water/art-20044256",
     "instructions": [
       "Step 1: Carry a reusable water bottle with you throughout the day.",
@@ -46,7 +46,7 @@
     "title": "Steep into a Heart-Healthy Morning",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical health",
+    "aspect": "Physical",
     "link": "https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/nutrition-basics/whole-grains-refined-grains-and-dietary-fiber",
     "instructions": [
       "Step 1: Choose whole grains such as oatmeal or whole wheat toast for sustained energy.",
@@ -60,7 +60,7 @@
     "title": "Take a Stroll for Concentration",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical",
+    "aspect": "Physical",
     "link": "https://www.psychologytoday.com/us/blog/the-athletes-way/201310/the-neuroscience-improving-your-focus",
     "instructions": [
       "Step 1: Choose a quiet, scenic route for your walk to minimize distractions and promote relaxation.",
@@ -74,7 +74,7 @@
     "title": "Sweat Out Stress",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical",
+    "aspect": "Physical",
     "link": "https://www.health.harvard.edu/staying-healthy/exercising-to-relax",
     "instructions": [
       "Step 1: Choose a physical activity that you enjoy, such as running, cycling, or swimming.",
@@ -88,7 +88,7 @@
     "title": "Yoga or Pilates in Your Living Room",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical",
+    "aspect": "Physical",
     "link": "https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/pilates-for-beginners/art-20047673",
     "instructions": [
       "Step 1: Clear a space in your living room free from clutter or distractions.",
@@ -102,7 +102,7 @@
     "title": "Jump Rope for Cardio",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical",
+    "aspect": "Physical",
     "link": "https://www.heart.org/en/healthy-living/fitness/fitness-basics/aha-recs-for-physical-activity-in-adults",
     "instructions": [
       "Step 1: Choose a sturdy surface with ample space for jumping rope without obstruction.",
@@ -116,7 +116,7 @@
     "title": "Practice Tai Chi or Qi Gong",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical",
+    "aspect": "Physical",
     "link": "https://www.mayoclinic.org/healthy-lifestyle/stress-management/in-depth/tai-chi/art-20045184",
     "instructions": [
       "Step 1: Find a quiet, peaceful space outdoors or indoors with good ventilation.",
@@ -130,7 +130,7 @@
     "title": "Join a Dance Class",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical",
+    "aspect": "Physical",
     "link": "https://www.heart.org/en/healthy-living/fitness/getting-active/how-to-start-a-dance-group",
     "instructions": [
       "Step 1: Research local dance studios or community centers offering classes in various dance styles.",
@@ -144,7 +144,7 @@
     "title": "Engage in High-Intensity Interval Training (HIIT)",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical",
+    "aspect": "Physical",
     "link": "https://www.health.harvard.edu/exercise-and-fitness/the-hype-on-hiit",
     "instructions": [
       "Step 1: Warm up with dynamic stretches and light cardio exercises for 5-10 minutes.",
@@ -158,7 +158,7 @@
     "title": "Play a Sport with Friends",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical",
+    "aspect": "Physical",
     "link": "https://www.heart.org/en/healthy-living/fitness/fitness-basics/aha-recs-for-physical-activity-in-adults",
     "instructions": [
       "Step 1: Gather friends or family members interested in playing a sport together.",
@@ -172,7 +172,7 @@
     "title": "Take a Bike Ride",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Physical",
+    "aspect": "Physical",
     "link": "https://www.heart.org/en/healthy-living/fitness/getting-active/cycling-how-to-get-started",
     "instructions": [
       "Step 1: Check your bike's tires, brakes, and gears to ensure they are in good working condition.",
@@ -186,7 +186,7 @@
     "title": "Inspire Yourself with #SelfcareSunday",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.psychologytoday.com/us/blog/click-here-happiness/201812/self-care-sunday-10-ways-nourish-your-mind-and-soul",
     "instructions": [
       "Step 1: Set aside time on Sunday to focus on self-care and emotional well-being.",
@@ -200,7 +200,7 @@
     "title": "Create a \"Yay!\" List",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://psychcentral.com/blog/5-steps-to-create-a-yay-list-for-a-happier-you/",
     "instructions": [
       "Step 1: Set aside time to reflect on your achievements, no matter how small, and things that bring you joy.",
@@ -214,7 +214,7 @@
     "title": "Discover New Podcast Pleasures",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.podcastinsights.com/best-podcasts/",
     "instructions": [
       "Step 1: Explore different genres and topics of podcasts that interest you, such as self-improvement, storytelling, or comedy.",
@@ -228,7 +228,7 @@
     "title": "Plan Your Dream Getaway",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.travelandleisure.com/trip-ideas",
     "instructions": [
       "Step 1: Set aside time to daydream and visualize your ideal vacation destination or experience.",
@@ -242,7 +242,7 @@
     "title": "Make Your Mantra Count",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.mindbodygreen.com/0-10812/why-you-should-be-using-mantras-how-to-start-today.html",
     "instructions": [
       "Step 1: Choose a positive affirmation or mantra that resonates with you and reflects your goals or values.",
@@ -256,7 +256,7 @@
     "title": "Capture Moments Through Photography",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.nytimes.com/guides/smarterliving/how-to-start-a-photography-habit",
     "instructions": [
       "Step 1: Start with a camera or smartphone and begin noticing interesting moments or scenes in your daily life.",
@@ -270,7 +270,7 @@
     "title": "Curate Your Social Media Feed",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.lifehack.org/625383/how-to-curate-your-social-media-feeds-to-make-you-happy-in-10-minutes",
     "instructions": [
       "Step 1: Evaluate your current social media feeds and identify content that brings you joy, inspiration, and positivity.",
@@ -284,7 +284,7 @@
     "title": "Celebrate the Power of Silence",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.psychologytoday.com/us/blog/feeling-it/201712/5-ways-embrace-the-power-silence",
     "instructions": [
       "Step 1: Find a quiet, peaceful space free from distractions and interruptions.",
@@ -298,7 +298,7 @@
     "title": "Embrace the Joy of Missing Out",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.psychologytoday.com/us/blog/the-couch/201805/the-joy-missing-out",
     "instructions": [
       "Step 1: Identify activities or commitments that drain your energy or bring you little joy.",
@@ -312,7 +312,7 @@
     "title": "Dedicate Time to Doing Nothing",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.lifehack.org/848107/do-nothing",
     "instructions": [
       "Step 1: Set aside intentional time in your schedule for doing nothing, free from obligations or distractions.",
@@ -326,7 +326,7 @@
     "title": "Meditation in a Quiet Corner",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.mindful.org/meditation/mindfulness-getting-started/",
     "instructions": [
       "Step 1: Find a quiet, comfortable corner in your home where you can sit or lie down undisturbed.",
@@ -340,7 +340,7 @@
     "title": "Listening to Guided Meditation",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.healthline.com/health/guided-meditation",
     "instructions": [
       "Step 1: Find a comfortable, quiet space where you can listen to guided meditation without interruption.",
@@ -354,7 +354,7 @@
     "title": "Watching Inspiring Documentaries",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.rottentomatoes.com/top/bestofrt/top_100_documentary_movies/",
     "instructions": [
       "Step 1: Explore documentary films across various genres, including history, science, nature, and social issues.",
@@ -368,7 +368,7 @@
     "title": "Listening to Deep Breathing Exercises",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.verywellmind.com/deep-breathing-exercises-4798935",
     "instructions": [
       "Step 1: Find a quiet, comfortable space where you can sit or lie down with your eyes closed.",
@@ -382,7 +382,7 @@
     "title": "Self-Reflection through Meditation or Journaling",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Mental",
+    "aspect": "Mental",
     "link": "https://www.developgoodhabits.com/self-reflection/",
     "instructions": [
       "Step 1: Set aside dedicated time for self-reflection, either through meditation or journaling.",
@@ -391,13 +391,12 @@
       "Step 4: Review your reflections regularly to gain insights, track progress, and cultivate self-awareness and personal development."
     ]
   },
-  [
-    {
+  {
       "id": "29",
       "title": "Connect and Dial Up Some Love",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotional",
+      "aspect": "Emotional",
       "link": "https://www.psychologytoday.com/us/blog/friendship-20/201812/10-ways-connect-others",
       "instructions": [
         "Step 1: Reach out to friends, family, or acquaintances through phone calls, video chats, or messaging apps.",
@@ -405,13 +404,13 @@
         "Step 3: Engage in active listening and genuine conversation, showing empathy and support for others.",
         "Step 4: Make plans for future activities or outings to maintain connection and create lasting memories."
       ]
-    },
+  },
     {
       "id": "30",
       "title": "Inspire Yourself with #SelfcareSunday",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotional",
+      "aspect": "Emotional",
       "link": "https://www.psychologytoday.com/us/blog/click-here-happiness/201812/self-care-sunday-10-ways-nourish-your-mind-and-soul",
       "instructions": [
         "Step 1: Set aside time on Sunday to focus on self-care and emotional well-being.",
@@ -425,7 +424,7 @@
       "title": "Laugh Out Loud with Friends",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotional",
+      "aspect": "Emotional",
       "link": "https://www.health.harvard.edu/blog/the-happiness-health-connection-2017021611219",
       "instructions": [
         "Step 1: Arrange a gathering with friends or loved ones with the intention of sharing laughter and joy.",
@@ -439,7 +438,7 @@
       "title": "Plan a Play Date for Yourself",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotional",
+      "aspect": "Emotional",
       "link": "https://www.psychologytoday.com/us/blog/in-the-trenches/201404/why-grown-ups-still-need-play-date",
       "instructions": [
         "Step 1: Set aside time in your schedule for a solo play date, dedicated to activities that bring you joy and relaxation.",
@@ -453,7 +452,7 @@
       "title": "Join an Online Support Group",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotional",
+      "aspect": "Emotional",
       "link": "https://www.verywellmind.com/online-support-groups-5118926",
       "instructions": [
         "Step 1: Research online support groups related to your interests, challenges, or goals.",
@@ -467,7 +466,7 @@
       "title": "Write a Letter to a Loved One",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotional",
+      "aspect": "Emotional",
       "link": "https://www.psychologytoday.com/us/blog/the-dance-connection/201606/the-power-writing-letters",
       "instructions": [
         "Step 1: Choose a loved one whom you wish to express your thoughts, feelings, or gratitude towards.",
@@ -481,7 +480,7 @@
       "title": "Share a Meal with Family or Friends",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Social connection",
+      "aspect": "Social connection",
       "link": "https://www.verywellmind.com/how-sharing-meals-can-help-your-family-bond-4139609",
       "instructions": [
         "Step 1: Plan a gathering with family members or friends, whether at home or at a favorite restaurant.",
@@ -495,7 +494,7 @@
       "title": "Express Gratitude to Someone",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotionalwell-being",
+      "aspect": "Emotionalwell-being",
       "link": "https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier",
       "instructions": [
         "Step 1: Choose someone in your life whom you appreciate or admire, whether a friend, family member, or colleague.",
@@ -509,7 +508,7 @@
       "title": "Watch a Feel-Good Movie",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotionalenjoyment",
+      "aspect": "Emotionalenjoyment",
       "link": "https://www.bustle.com/articles/118939-11-feel-good-movies-to-watch-when-youre-feeling-down",
       "instructions": [
         "Step 1: Choose a feel-good movie from your favorite genre, whether comedy, romance, or drama.",
@@ -523,7 +522,7 @@
       "title": "Have a Heart-to-Heart Conversation",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotionalconnection",
+      "aspect": "Emotionalconnection",
       "link": "https://www.psychologytoday.com/us/blog/fulfillment-any-age/201709/the-art-having-heart-heart-conversations",
       "instructions": [
         "Step 1: Choose a trusted friend, family member, or partner with whom you feel comfortable opening up.",
@@ -537,7 +536,7 @@
       "title": "Volunteer for a Cause You Care About",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Social connection",
+      "aspect": "Social connection",
       "link": "https://www.helpguide.org/articles/healthy-living/volunteering-and-its-surprising-benefits.htm",
       "instructions": [
         "Step 1: Identify a cause or organization that aligns with your values and interests, whether local or global.",
@@ -551,7 +550,7 @@
       "title": "Practice Forgiveness Towards Yourself or Others",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotionalhealing",
+      "aspect": "Emotionalhealing",
       "link": "https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/forgiveness/art-20047692",
       "instructions": [
         "Step 1: Reflect on past experiences or conflicts that have caused hurt or resentment, either towards yourself or others.",
@@ -565,7 +564,7 @@
       "title": "Engage in Creative Expression (painting, writing, music, etc.)",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotional",
+      "aspect": "Emotional",
       "link": "https://www.verywellmind.com/the-importance-of-creative-outlets-for-stress-relief-3144563",
       "instructions": [
         "Step 1: Choose a creative outlet that resonates with you, whether painting, writing, music, or crafting.",
@@ -579,7 +578,7 @@
       "title": "Reflect on Past Achievements and Successes",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotional",
+      "aspect": "Emotional",
       "link": "https://positivepsychology.com/self-reflection/",
       "instructions": [
         "Step 1: Set aside time for self-reflection, either through meditation, journaling, or quiet contemplation.",
@@ -593,7 +592,7 @@
       "title": "Spend Quality Time with a Pet",
       "imageUrl": "",
       "color": "#FFA500",
-      "tag": "Emotional",
+      "aspect": "Emotional",
       "link": "https://www.helpguide.org/articles/mental-health/mood-boosting-power-of-dogs.htm",
       "instructions": [
         "Step 1: Set aside dedicated time to bond and connect with your pet, whether a dog, cat, or other animal companion.",
@@ -601,14 +600,13 @@
         "Step 3: Be fully present and attentive to your pet's needs and cues, fostering mutual trust, affection, and companionship.",
         "Step 4: Appreciate the unconditional love and joy that pets bring into your life, nurturing your emotional well-being and sense of connection."
       ]
-    }
-  ],
+    },
   {
     "id": "44",
     "title": "Journaling about Spiritual Journey",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Spiritual",
+    "aspect": "Spiritual",
     "link": "https://www.lifehack.org/articles/lifestyle/writing-and-journaling-to-improve-your-spiritual-life.html",
     "instructions": [
       "Step 1: Set aside dedicated time each day or week for spiritual journaling.",
@@ -622,7 +620,7 @@
     "title": "Reading Spiritual or Self-Help Books",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Spiritual",
+    "aspect": "Spiritual",
     "link": "https://www.goodreads.com/genres/spirituality",
     "instructions": [
       "Step 1: Choose spiritual or self-help books that resonate with your beliefs, interests, and goals.",
@@ -636,7 +634,7 @@
     "title": "Creating a Sacred Space",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Spiritual",
+    "aspect": "Spiritual",
     "link": "https://www.mindbodygreen.com/articles/how-to-create-a-sacred-space",
     "instructions": [
       "Step 1: Choose a quiet and peaceful area in your home or outdoors for your sacred space.",
@@ -650,7 +648,7 @@
     "title": "A 4-Minute Meditation",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Spiritual",
+    "aspect": "Spiritual",
     "link": "https://youtu.be/GNw6FvrYhbg?si=0Qadtgytncpqf37u",
     "instructions": [
       "Step 1: Find a quiet and comfortable space where you can sit or lie down undisturbed.",
@@ -664,7 +662,7 @@
     "title": "Setting Intentions for Spiritual Development",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Spiritual",
+    "aspect": "Spiritual",
     "link": "https://www.louisehay.com/affirmations-for-spiritual-development/",
     "instructions": [
       "Step 1: Begin by quieting your mind and connecting with your inner wisdom through meditation or reflection.",
@@ -678,7 +676,7 @@
     "title": "Find a More Joyful You With Our 14-Day Happiness Challenge",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Spiritual",
+    "aspect": "Spiritual",
     "link": "https://www.goodhousekeeping.com/life/relationships/g39851255/14-day-happiness-challenge/",
     "instructions": [
       "Step 1: Commit to participating in a 14-day happiness challenge to cultivate joy and well-being.",
@@ -692,7 +690,7 @@
     "title": "Sleep-Inducing Forest Sounds",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Spiritual",
+    "aspect": "Spiritual",
     "link": "https://www.youtube.com/watch?v=eKFTSSKCzWA",
     "instructions": [
       "Step 1: Find a quiet and comfortable space where you can relax and unwind before bedtime.",
@@ -706,7 +704,7 @@
     "title": "An Anxiety-Reducing Song",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Spiritual",
+    "aspect": "Spiritual",
     "link": "https://www.youtube.com/watch?v=qYnA9wWFHLI",
     "instructions": [
       "Step 1: Choose a calming and soothing song that resonates with you and helps alleviate anxiety.",
@@ -720,7 +718,7 @@
     "title": "A Mindful Breathing Exercise",
     "imageUrl": "",
     "color": "#FFA500",
-    "tag": "Spiritual",
+    "aspect": "Spiritual",
     "link": "https://www.youtube.com/watch?v=7xalaT2FwS8",
     "instructions": [
       "Step 1: Find a comfortable and quiet space where you can sit or lie down without distractions.",
